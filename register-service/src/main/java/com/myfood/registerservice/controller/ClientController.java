@@ -43,5 +43,14 @@ public class ClientController {
         Client updatedClient = clientService.updateClient(client);
         return Objects.nonNull(updatedClient) ? ResponseEntity.ok(updatedClient) : ResponseEntity.notFound().build();
     }
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity deleteClient (@PathVariable("id") Long id) {
+        return clientService.deleteClient(id) ? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
+    }
 
+    @GetMapping("/find/{id}")
+    public ResponseEntity getClientById (@PathVariable("id") Long id) {
+        Optional<Client> client = clientService.getClientById(id);
+        return client.isPresent() ? ResponseEntity.ok(client.get()) : ResponseEntity.notFound().build();
+    }
 }

@@ -17,11 +17,11 @@ public class ClientService {
         this.clientRepository = clientRepository;
     }
 
-    public Client createClient (Client client) {
+    public Client createClient(Client client) {
         return clientRepository.save(client);
     }
 
-    public Client updateClient (Client client) {
+    public Client updateClient(Client client) {
 
         Optional<Client> newClient = clientRepository.findById(client.getId());
 
@@ -30,5 +30,20 @@ public class ClientService {
             return clientRepository.save(client);
         }
         return null;
+    }
+
+    public boolean deleteClient(Long id) {
+        Optional<Client> client = clientRepository.findById(id);
+
+        if (client.isPresent()) {
+            clientRepository.delete(client.get());
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public Optional<Client> getClientById (Long id) {
+        return clientRepository.findById(id);
     }
 }
