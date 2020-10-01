@@ -3,11 +3,32 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b0b98cab-7506-47d4-8edb-5e993c0c7e3c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/register-service/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/src/main/java/com/myfood/registerservice/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/register-service/src/main/java/com/myfood/registerservice/entity/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/register-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register-service/src/main/java/com/myfood/registerservice/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/register-service/src/main/java/com/myfood/registerservice/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register-service/src/main/java/com/myfood/registerservice/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/register-service/src/main/java/com/myfood/registerservice/repository/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register-service/src/main/java/com/myfood/registerservice/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/register-service/src/main/java/com/myfood/registerservice/service/ClientService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +84,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.RegisterServiceApplication">
@@ -118,5 +140,22 @@
       <updated>1601474534866</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1601515224961">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601515224961" />
   </component>
 </project>

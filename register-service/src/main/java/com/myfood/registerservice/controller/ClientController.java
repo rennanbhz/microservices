@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Objects;
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/client")
 public class ClientController {
@@ -20,7 +23,25 @@ public class ClientController {
 
     @PostMapping("/create")
     public ResponseEntity createCliente (@RequestBody ClientDTO clientDTO) {
-        return ResponseEntity.ok(clientService.createClient(Client.clientMapper(clientDTO)));
+
+        try {
+
+            return ResponseEntity.ok(clientService.createClient(Client.clientMapper(clientDTO)));
+
+        } catch (Exception e) {
+
+           return ResponseEntity.badRequest().body(e);
+        }
+    }
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity updateClient (@PathVariable ("id") Long id, @RequestBody ClientDTO clientDTO) {
+
+        Client client = Client.clientMapper(clientDTO);
+        client.setId(id);
+
+        Client updatedClient = clientService.updateClient(client);
+        return Objects.nonNull(updatedClient) ? ResponseEntity.ok(updatedClient) : ResponseEntity.notFound().build();
     }
 
 }
