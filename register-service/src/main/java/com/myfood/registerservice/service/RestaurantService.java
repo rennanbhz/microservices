@@ -2,6 +2,7 @@ package com.myfood.registerservice.service;
 
 import com.myfood.registerservice.entity.Restaurant;
 import com.myfood.registerservice.repository.RestaurantRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -11,7 +12,7 @@ public class RestaurantService {
 
     private final RestaurantRepository restaurantRepository;
 
-
+    @Autowired
     public RestaurantService(RestaurantRepository restaurantRepository) {
         this.restaurantRepository = restaurantRepository;
     }
