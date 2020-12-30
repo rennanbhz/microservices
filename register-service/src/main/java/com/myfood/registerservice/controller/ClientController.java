@@ -22,7 +22,7 @@ public class ClientController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity createCliente (@RequestBody ClientDTO clientDTO) {
+    public ResponseEntity createClient (@RequestBody ClientDTO clientDTO) {
 
         try {
 

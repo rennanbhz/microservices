@@ -2,6 +2,7 @@ package com.myfood.registerservice.controller;
 
 import com.myfood.registerservice.domain.MenuDTO;
 import com.myfood.registerservice.entity.Menu;
+import com.myfood.registerservice.exception.NotFoundException;
 import com.myfood.registerservice.service.MenuService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +26,15 @@ public class MenuController {
 
         try {
             Menu menu = menuService.createMenu(menuDTO);
-            return Objects.nonNull(menu) ? ResponseEntity.ok(menu) : ResponseEntity.notFound().build();
+
+            MenuDTO dto = new MenuDTO();
+            if (menu != null) {
+                dto.setName(menu.getName());
+                dto.setPrice(menu.getPrice());
+                dto.setRestaurant(menu.getRestaurant().getId());
+            }
+
+            return Objects.nonNull(menu) ? ResponseEntity.ok(dto) : ResponseEntity.notFound().build();
 
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e);

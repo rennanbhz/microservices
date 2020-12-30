@@ -9,8 +9,6 @@ import lombok.*;
 @ToString
 public class MenuDTO {
 
-    private Long id;
-
     private String name;
 
     private Double price;
