@@ -28,7 +28,6 @@ public class MenuService {
         Optional<Restaurant> restaurant = restaurantRepository.findById(menuDTO.getRestaurant());
 
         if (restaurant.isPresent()) {
-
             Menu menu = Menu.create(menuDTO);
             menu.setRestaurant(restaurant.get());
             return menuRepository.save(menu);
